@@ -53,7 +53,7 @@ const styles = StyleSheet.create({
 
   container: {
     flex: 1,
-    backgroundColor: "white"
+   // backgroundColor: "white"
   },
   button: {
     backgroundColor: '#ddd',
@@ -72,10 +72,10 @@ const styles = StyleSheet.create({
   },
   buttonText: {
     fontSize: 23,
-    color: '#565656'
+    color: '#000'
   },
   lastButtonText: {
     fontSize: 23,
-    color: 'white'
+    color: '#fff'
   },
 })

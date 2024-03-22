@@ -7,13 +7,13 @@ export const OnboardingComponent = ({ title, subTitle, buttonTitle, bgImage, onP
     <View style={styles.container}>
 
       <ImageBackground style={{ flex: 1, backgroundColor: "#52A19E" }} source={bgImage}>
-        <View style={{ flex: 2 }}></View>
-        <View style={{ flex: 1.4, backgroundColor: "white", borderTopStartRadius: 20, borderTopEndRadius: 20, alignItems: 'center', justifyContent: 'center', padding: 10 }}>
+        <View style={{ flex: 1 }}></View>
+        <View style={{ flex: 2,  borderTopStartRadius: 20, borderTopEndRadius: 20, alignItems: 'center', justifyContent: 'center', padding: 10 }}>
 
           <View style={styles.content}>
             {/* Title and Subtitle */}
-            <Text style={{ fontSize: 32, fontWeight: 'bold', textTransform: 'capitalize', marginBottom: 10 }}>{title}</Text>
-            <Text style={{ fontSize: 18, color: '#565656' }}>{subTitle}</Text>
+            <Text style={{ fontSize: 45, fontWeight: '200', textTransform: 'capitalize' }}>{title}</Text>
+            <Text style={{ fontSize: 40, fontWeight: 600 }}>{subTitle}</Text>
           </View>
 
           <View style={[styles.buttons]}>
@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
 
   },
   content: {
-    marginBottom: 40,
+    marginBottom: 70,
     alignItems: 'center',
   },
   buttons: {
