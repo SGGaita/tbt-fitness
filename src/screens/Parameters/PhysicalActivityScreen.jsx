@@ -1,10 +1,10 @@
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native';
 import React from 'react';
 import { COLORS, FONTS, SIZES, routes } from '../../constants';
-import {  GoalComponent } from '../../components';
+import {  ActivityLevelComponent } from '../../components';
 import { useNavigation } from '@react-navigation/native';
 
-export const GoalScreen = () => {
+export const PhysicalActivityScreen = () => {
   const navigation = useNavigation();
 
   const handleBack = () => {
@@ -12,7 +12,7 @@ export const GoalScreen = () => {
   };
 
   const handleContinue = () => {
-    navigation.navigate(routes.PHYSICALACTIVITYSCREEN); // Assuming you have a GOALSCREEN route
+    navigation.navigate(routes.PROFILEBUILDERSCREEN); // Assuming you have a GOALSCREEN route
   };
 
   return (
@@ -20,16 +20,16 @@ export const GoalScreen = () => {
       <View style={styles.topSection}>
         <View style={{ alignSelf: 'center' }}>
           <Text style={{ ...FONTS.h1, fontWeight: 700, alignSelf: 'center' }}>
-            What is your Goal?
+           Physical Activity Level?
           </Text>
           <Text style={{ ...FONTS.body1, alignSelf: 'center', textAlign: 'center' }}>
-            You can choose multiple goals. Don't worry, you can change this later.
+            Choose your regular activity level. This will help us to personalize plans for you.
           </Text>
         </View>
       </View>
 
       <View style={styles.midSection}>
-        <GoalComponent/>
+        <ActivityLevelComponent/>
       </View>
 
       <View style={styles.bottomSection}>

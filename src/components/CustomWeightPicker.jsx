@@ -24,63 +24,55 @@ export const CustomWeightPicker = () => {
         }
       };
     
-      // Helper function to clear the input field
-      const handleClear = () => {
-        setWeight('');
-      };
+     
     
 
   return (
     <View style={styles.weightPicker}>
-      <TouchableOpacity style={styles.buttonLeft} onPress={handleDecrement}>
-        <Text style={styles.buttonText}>-</Text>
+      <TouchableOpacity style={styles.buttonTop} onPress={handleIncrement}>
+        <Text style={styles.buttonText}>+</Text>
       </TouchableOpacity>
       <TextInput
         style={styles.weightInput}
-        value={weight.toString()} // Convert weight to string for TextInput
+        value={weight.toString()} // Convert height to string for TextInput
         keyboardType="number-pad" // Set keyboard type for numbers
         onChangeText={handleChangeText}
-        minLength={2} // Limit input to 3 digits (weight in kgs)
-        maxLength={3} // Limit input to 3 digits (weight in kgs)
+        maxLength={3} // Limit input to 3 digits (height in cm)
       />
-      <TouchableOpacity style={styles.clearButton} onPress={handleClear}>
-        <Text style={styles.clearButtonText}>X</Text> 
-        </TouchableOpacity>
-      <TouchableOpacity style={styles.buttonRight} onPress={handleIncrement}>
-        <Text style={styles.buttonText}>+</Text>
+      <Text style={styles.unitText}>Kg(s)</Text>
+      <TouchableOpacity style={styles.buttonBottom} onPress={handleDecrement}>
+        <Text style={styles.buttonText}>-</Text>
       </TouchableOpacity>
     </View>
   );
 };
 
 const styles = StyleSheet.create({
-  weightPicker: {
-    alignItems: 'center',
-    //backgroundColor:COLORS.textGray,
-    width:'100%',
-    borderColor:COLORS.textGray,
-    
-    //elevation:0.1,
-    //paddingHorizontal:SIZES.padding * 2,
-    borderRadius: SIZES.radius,
-    flexDirection:'row'
-  },
-  buttonLeft: {
-    paddingHorizontal: SIZES.padding * 2,
-    backgroundColor:COLORS.textGray,
-    opacity:0.5,
-    paddingVertical: SIZES.padding * 1.5,
-    borderBottomStartRadius:10,
-    borderTopStartRadius:10
-  },
-  buttonRight: {
-    paddingHorizontal: SIZES.padding * 2,
-    backgroundColor:COLORS.textGray,
-    opacity:0.5,
-    paddingVertical: SIZES.padding * 1.5,
-    borderBottomEndRadius:10,
-    borderTopEndRadius:10
-  },
+    weightPicker: {
+        alignItems: 'center',
+        justifyContent: 'center', // Center elements vertically
+        
+      },
+      buttonTop: {
+        marginBottom: SIZES.padding * 0.5, // Add small margin between buttons and input
+        backgroundColor:COLORS.textGray,
+        opacity:0.5,
+        paddingVertical: SIZES.padding * 1.5,
+        borderTopEndRadius:10,
+        borderTopStartRadius:10,
+        width:70,
+        alignItems:'center'
+      },
+      buttonBottom: {
+        marginTop: SIZES.padding * 0.5, // Add small margin between buttons and input
+        backgroundColor:COLORS.textGray,
+        opacity:0.5,
+        paddingVertical: SIZES.padding * 1.5,
+        borderBottomEndRadius:10,
+        borderBottomStartRadius:10,
+        width:70,
+        alignItems:'center'
+      },
   buttonText: {
     fontSize: 24,
     fontWeight: 'bold',
@@ -91,7 +83,11 @@ const styles = StyleSheet.create({
     width: 70, // Adjust width for input field
     textAlign: 'center',
     color: COLORS.primaryDark,
-    marginVertical: 10, // Add vertical spacing around input
+  },
+  unitText: {
+    fontSize: 18,
+    fontWeight: 'bold',
+    marginBottom: SIZES.padding * 0.5, // Add small margin between input and unit text
   },
     // ... your existing styles
     clearButton: {

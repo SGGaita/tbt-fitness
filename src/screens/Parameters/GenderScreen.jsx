@@ -1,7 +1,7 @@
-import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
+import { StyleSheet, Text, View, TouchableOpacity, Image } from 'react-native'
 import React, { useState } from 'react'
 import { useNavigation } from '@react-navigation/native'
-import { COLORS, FONTS, routes, SIZES } from '../../constants'
+import { COLORS, FONTS, icons, routes, SIZES } from '../../constants'
 
 export const GenderScreen = () => {
     const [gender, setGender] = useState(null); // Use null as initial value for clarity
@@ -47,8 +47,9 @@ export const GenderScreen = () => {
                         gender === 'Male' && styles.genderButtonSelected, // Conditional styling for Male
                     ]}
                     onPress={() => handleGenderSelect('Male')}
-                >
-                    <Text style={[{ fontSize: 20 }, gender === 'Male' && styles.genderButtonTextSelected, ]}>Male</Text>
+                > 
+                <Image source={icons.male} resizeMOde='contain' style={[{width:40, height:40, marginBottom:5},  gender === 'Male' && styles.genderButtonImageSelected]}/>
+                    <Text style={[{ fontSize: 16 }, gender === 'Male' && styles.genderButtonTextSelected, ]}>Male</Text>
                 </TouchableOpacity>
 
                 <TouchableOpacity
@@ -58,7 +59,8 @@ export const GenderScreen = () => {
                     ]}
                     onPress={() => handleGenderSelect('Female')}
                 >
-                    <Text style={[{ fontSize: 20 }, gender === 'Female' && styles.genderButtonTextSelected, ]}>Female</Text>
+                    <Image source={icons.female} resizeMOde='contain' style={[{width:40, height:40, marginBottom:5},  gender === 'Female' && styles.genderButtonImageSelected]}/>
+                    <Text style={[{ fontSize: 16 }, gender === 'Female' && styles.genderButtonTextSelected, ]}>Female</Text>
                 </TouchableOpacity>
             </View>
 
@@ -128,6 +130,10 @@ const styles = StyleSheet.create({
       genderButtonTextSelected:{
         color: COLORS.white
       },
+      genderButtonImageSelected:{
+        tintColor:COLORS.white
+      },
+
     button: {
         backgroundColor: COLORS.primaryDark,
         height: 60,

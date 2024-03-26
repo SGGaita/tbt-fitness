@@ -14,7 +14,7 @@ export const EmailScreen = () => {
         <KeyboardAvoidingView style={styles.container}>
             <View style={styles.topSection}>
                 <View style={{ marginBottom: 30, width: '100%', alignSelf: 'center' }}>
-                    <Text style={{ ...FONTS.largeTitle, fontWeight: 600, alignSelf: 'flex-start' }}>Unlock you fitness journey</Text>
+                    <Text style={{ fontSize:35, fontWeight: 600, alignSelf: 'flex-start' }}>Unlock you fitness journey</Text>
                 </View>
                 <View style={{ marginBottom: 20 }}>
                     <TextInput
@@ -65,8 +65,8 @@ const styles = StyleSheet.create({
     textInput: {
         color: '#000',
         width: '100%',
-        backgroundColor: '#cfcfcf',
-        height: 60,
+        backgroundColor: COLORS.secondary,
+        height: 50,
         borderRadius: 10,
         paddingHorizontal: 10
     },

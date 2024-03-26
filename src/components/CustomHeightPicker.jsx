@@ -42,9 +42,7 @@ export const CustomHeightPicker = () => {
       <TouchableOpacity style={styles.buttonBottom} onPress={handleDecrement}>
         <Text style={styles.buttonText}>-</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.clearButton} onPress={handleClear}>
-        <Text style={styles.clearButtonText}>X</Text>
-      </TouchableOpacity>
+      
     </View>
   );
 };

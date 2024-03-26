@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View, TouchableOpacity } from 'react-native'
 import React from 'react'
-import { COLORS, FONTS, SIZES } from '../../constants'
+import { COLORS, FONTS, SIZES, routes } from '../../constants'
 import { CustomHeightPicker } from '../../components'
 import { useNavigation } from '@react-navigation/native'
 
@@ -12,7 +12,7 @@ export const HeightScreen = () => {
   }
 
   const handleContinue = () => {
-    navigation.navigate(routes.HEIGHTSCREEN)
+    navigation.navigate(routes.GOALSCREEN)
   }
 
   return (

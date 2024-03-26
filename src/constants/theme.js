@@ -7,7 +7,7 @@ export const COLORS = {
   primary: "#D93025", // Red
   primaryLight:"#fce0de",
   primaryDark: "#C92A1B",
-  secondary: "#F4F2F0", // Light gray
+  secondary: "#e0e0e0", // Light gray
   textBlack: "#1E1F20",
   textGray: "#C1C3C5",
   black: "#1E1F20",
