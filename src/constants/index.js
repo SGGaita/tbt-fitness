@@ -1,3 +1,5 @@
 import images from "./images";
+import routes from "./routes";
+import theme, {COLORS, SIZES, FONTS} from "./theme"
 
-export { images }
+export { images, routes, theme, COLORS, SIZES, FONTS }

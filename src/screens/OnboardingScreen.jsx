@@ -1,7 +1,7 @@
 import {  StyleSheet,  View } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import { OnboardingComponent } from '../components'
-import { images } from '../constants'
+import { images, routes } from '../constants'
 import { onboardingData } from '../data/onboardingData'
 import { useNavigation } from '@react-navigation/native'
 
@@ -25,7 +25,7 @@ export const OnboardingScreen = () => {
   const handleNext = () => {
     if (currentIndex === onboardingData.length - 1) {
       // Navigate to Home screen on last slide
-      navigation.navigate('Home');
+      navigation.navigate(routes.EMAILSCREEN);
     } else {
       setCurrentIndex((prevIndex) => Math.min(prevIndex + 1, onboardingData.length - 1));
 
